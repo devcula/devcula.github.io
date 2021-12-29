@@ -2,9 +2,10 @@
   "name": "devcula.github.io",
   "version": "1.0.0",
   "description": "Abhishek Prasad's Portfolio",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --config webpack.config.js --env env=development",
+    "build": "webpack --config webpack.config.js --env env=production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,29 @@
   "bugs": {
     "url": "https://github.com/devcula/devcula.github.io/issues"
   },
-  "homepage": "https://github.com/devcula/devcula.github.io#readme"
+  "homepage": "https://github.com/devcula/devcula.github.io#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
+  }
 }
