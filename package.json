@@ -1,0 +1,19 @@
+{
+  "name": "devcula.github.io",
+  "version": "1.0.0",
+  "description": "Abhishek Prasad's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devcula/devcula.github.io.git"
+  },
+  "author": "Abhishek Prasad (dEvCuLa)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devcula/devcula.github.io/issues"
+  },
+  "homepage": "https://github.com/devcula/devcula.github.io#readme"
+}
