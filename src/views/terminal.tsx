@@ -3,7 +3,7 @@ import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 
 const TerminalController = (props = {}) => {
     const [terminalLineData, setTerminalLineData] = useState([
-        <TerminalOutput>Type help for getting help</TerminalOutput>
+        <TerminalOutput>{"$ " + new Date().toLocaleString()}</TerminalOutput>
     ]);
     const handleInput = (terminalInput: string) => {
         const data = [
