@@ -1,2 +1,0 @@
-# devcula.github.io
-Portfolio
