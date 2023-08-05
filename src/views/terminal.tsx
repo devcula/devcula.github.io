@@ -1,26 +1,16 @@
-import React, { useState } from 'react';
-import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
+import React from 'react';
+import Terminal, { ColorMode } from 'react-terminal-ui';
+import { TerminalProps } from '../interfaces/terminal';
 
-const TerminalController = (props = {}) => {
-    const [terminalLineData, setTerminalLineData] = useState([
-        <TerminalOutput>{"$ " + new Date().toLocaleString()}</TerminalOutput>
-    ]);
-    const handleInput = (terminalInput: string) => {
-        const data = [
-            ...terminalLineData, 
-            <TerminalOutput>{"$ " + terminalInput}</TerminalOutput>,
-            <TerminalOutput>{"$ " + terminalInput + " received"}</TerminalOutput>
-        ];
-        setTerminalLineData(data);
-    }
+const TerminalController = (props: TerminalProps) => {
     return (
         <div className="container">
             <Terminal 
-                name='Welcome to my Terminal' 
+                name={props.heading}
                 colorMode={ColorMode.Dark} 
-                onInput={handleInput}
+                onInput={props.handleInput}
             >
-                {terminalLineData}
+                {props.outputList}
             </Terminal>
         </div>
     )
